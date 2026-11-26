@@ -8,3 +8,14 @@ wheels/
 
 # Virtual environments
 .venv
+# Environment
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
