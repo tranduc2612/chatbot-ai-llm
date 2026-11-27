@@ -10,7 +10,6 @@ from core.database import Base
 class UserRole(str, PyEnum):
     ADMIN = "admin"
     USER = "user"
-    MODERATOR = "moderator"
 
 
 class User(Base):

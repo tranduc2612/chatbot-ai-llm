@@ -34,6 +34,12 @@ class Settings(BaseSettings):
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
     REFRESH_TOKEN_EXPIRE_DAYS: int = 3000
 
+    # Tài khoản admin mặc định, tạo lúc khởi động nếu chưa có (core/seed.py).
+    # ADMIN_PASSWORD để trống → không tạo. Đặt giá trị thật trong .env.
+    ADMIN_USERNAME: str = "admin"
+    ADMIN_EMAIL: str = "admin@example.com"
+    ADMIN_PASSWORD: str = ""
+
     # CORS
     # ALLOWED_ORIGINS: list[str] = ["http://localhost:3000", "http://localhost:8080"]
     model_config = SettingsConfigDict(env_file=".env")

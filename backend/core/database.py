@@ -32,10 +32,7 @@ class Base(DeclarativeBase):
     pass
 
 
-# Initialize database tables
-async def init_db() -> None:
-    async with engine.begin() as conn:
-        await conn.run_sync(Base.metadata.create_all)
+# Schema được quản lý bằng Alembic (core/migrations.py), không dùng create_all.
 
 
 # Database dependency
